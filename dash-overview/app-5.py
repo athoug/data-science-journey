@@ -28,13 +28,13 @@ page_layout = [
                 clearable=False,
             )
         ],
-            width={'size': 4, 'offset': 1, 'order': 0}
+            width={'size': 2, 'offset': 0, 'order': 1}
         ),
         dbc.Col([
             html.H3('Cool chart column', className='text-center'),
             dcc.Graph(id='graph-with-dropdown'),
         ],
-            width={'size': 6, 'offset': 1, 'order': 0}
+            width={'size': 8, 'offset': 0, 'order': 0}
         )
     ]),
 ]
@@ -53,6 +53,7 @@ def update_figure(selected_year):
     filtered_df = df[df.year == int(selected_year)]
     fig = px.scatter(filtered_df, x='gdpPercap', y='lifeExp', size='pop',
                      color='continent', hover_name='country', log_x=True, size_max=55)
+    fig.update_layout(transition_duration=800)
     return fig
 
 
