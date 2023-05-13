@@ -1,6 +1,7 @@
 # Exercises to help you get started with Dash
 # as stated here: https://github.com/Coding-with-Adam/Dash-by-Plotly/blob/master/Good_to_Know/Dash2.0/Exercises/Assignments.md
 # -----------------------------------------
+
 # Customize the layout so the dropdown and the choropleth graph are next to each other on the page. The total width
 
 # imports
